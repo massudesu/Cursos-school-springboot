@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de gestão acadêmica para escolas e cursos.">
+  <title>EducaHub | Gestão acadêmica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="EducaHub - início">
+      <span class="brand-mark">E</span><span>educa<span class="brand-accent">hub</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Início</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#gestao">Gestão</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="header-cta" href="#gestao">Acessar sistema <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> GESTÃO ACADÊMICA SIMPLIFICADA</span>
+        <h1>Uma escola organizada.<br><span>Um futuro sem limites.</span></h1>
+        <p>Centralize alunos, professores, cursos e toda a estrutura da sua instituição em um só lugar. Menos planilhas, mais educação.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#gestao">Conhecer o sistema <span>→</span></a>
+          <a class="text-link" href="#recursos">Explorar recursos <span>↓</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-avatars"><span>AL</span><span>MC</span><span>JP</span><span>+</span></div>
+          <div><strong>Gestão conectada</strong><small>Todos os dados em um só fluxo</small></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Resumo visual do painel acadêmico">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="floating-card card-students">
+          <span class="mini-icon purple">♙</span><div><small>Alunos cadastrados</small><strong id="heroStudentCount">—</strong></div><span class="trend">●</span>
+        </div>
+        <div class="dashboard-preview">
+          <div class="preview-top"><div><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span></div><span>VISÃO GERAL</span></div>
+          <div class="preview-title">Olá, equipe! <span>✦</span></div>
+          <p class="preview-subtitle">Acompanhe sua instituição</p>
+          <div class="preview-stats">
+            <div><small>Alunos</small><strong id="previewAlunos">—</strong><i class="stat-line purple-line"></i></div>
+            <div><small>Cursos</small><strong id="previewCursos">—</strong><i class="stat-line blue-line"></i></div>
+          </div>
+          <div class="preview-schedule"><div class="schedule-heading">Atividade acadêmica <span>•••</span></div><div class="schedule-row"><b class="schedule-icon lavender">⌂</b><span><strong>Turmas e salas</strong><small>Organização de aulas</small></span><em>01</em></div><div class="schedule-row"><b class="schedule-icon peach">✎</b><span><strong>Equipe docente</strong><small>Professores e cursos</small></span><em>02</em></div></div>
+        </div>
+        <div class="floating-card card-courses"><span class="mini-icon orange">✦</span><div><small>Organização</small><strong>Em um só lugar</strong></div></div>
+        <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+      </div>
+      <div class="hero-bottom"><span>01 / 04</span><span class="bottom-line"></span><span>EDUCAÇÃO COM GESTÃO INTELIGENTE</span></div>
+    </section>
+
+    <section class="feature-section section-wrap" id="recursos">
+      <div class="section-heading"><div><span class="eyebrow">TUDO CONECTADO</span><h2>O essencial para sua<br><span>escola evoluir.</span></h2></div><p>Uma plataforma para acompanhar a rotina acadêmica com clareza, organização e praticidade.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon lilac">♙</span><h3>Alunos</h3><p>Cadastre estudantes e mantenha seus dados sempre atualizados.</p><span class="feature-number">01</span></article>
+        <article class="feature-card"><span class="feature-icon blue">✎</span><h3>Professores</h3><p>Organize os dados da equipe docente e suas atribuições.</p><span class="feature-number">02</span></article>
+        <article class="feature-card"><span class="feature-icon peach">▤</span><h3>Cursos</h3><p>Gerencie cursos, descrições, cargas horárias e vínculos.</p><span class="feature-number">03</span></article>
+        <article class="feature-card"><span class="feature-icon mint">⌂</span><h3>Turmas e salas</h3><p>Associe alunos, cursos, horários e espaços físicos.</p><span class="feature-number">04</span></article>
+      </div>
+    </section>
+
+    <section class="management-section" id="gestao">
+      <div class="section-wrap">
+        <div class="section-heading management-heading"><div><span class="eyebrow">PAINEL DE CONTROLE</span><h2>Gestão acadêmica<br><span>na prática.</span></h2></div><p>Selecione uma área para consultar, cadastrar, editar ou remover informações. Os dados são carregados pela API.</p></div>
+        <div class="management-layout">
+          <aside class="sidebar">
+            <div class="sidebar-label">MENU PRINCIPAL</div>
+            <div id="entityNav" class="entity-nav">
+              <button class="nav-item active" data-entity="alunos"><span>♙</span> Alunos</button>
+              <button class="nav-item" data-entity="professores"><span>✎</span> Professores</button>
+              <button class="nav-item" data-entity="cursos"><span>▤</span> Cursos</button>
+              <button class="nav-item" data-entity="escolas"><span>⌂</span> Escolas</button>
+              <button class="nav-item" data-entity="turmas"><span>▦</span> Turmas</button>
+              <button class="nav-item" data-entity="salas"><span>▣</span> Salas</button>
+            </div>
+            <div class="sidebar-help"><span>✦</span><strong>Uma dica</strong><p>Cadastre primeiro escolas, professores, cursos e salas. Depois, organize as turmas e vincule os alunos.</p></div>
+          </aside>
+          <section class="workspace">
+            <div class="workspace-top"><div><span class="workspace-kicker">CADASTROS</span><h3 id="entityTitle">Alunos</h3><p id="entityDescription">Gerencie os estudantes da instituição.</p></div><button class="button button-primary add-button" id="addButton">＋ Novo cadastro</button></div>
+            <div class="toolbar"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar nesta lista..." aria-label="Buscar registros"></label><button class="button button-light" id="refreshButton">↻ Atualizar</button></div>
+            <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+            <div class="table-wrap"><table><thead id="tableHead"></thead><tbody id="tableBody"><tr><td class="loading-cell" colspan="5">Carregando informações...</td></tr></tbody></table></div>
+            <div class="table-footer"><span id="recordCount">Carregando registros...</span><span>Dados sincronizados com a API</span></div>
+          </section>
+        </div>
+
+        <section class="enrollment-section" aria-labelledby="enrollmentTitle">
+          <div class="enrollment-heading">
+            <div><span class="workspace-kicker">CONSULTA ACADÊMICA</span><h3 id="enrollmentTitle">Alunos por curso e escola</h3>
+            <p>Consulte em qual curso e escola cada aluno está matriculado e quem é o professor responsável.</p></div>
+            <button class="button button-light" id="refreshEnrollments">↻ Atualizar consulta</button>
+          </div>
+          <div class="new-enrollment">
+            <strong>Vincular aluno a uma turma</strong>
+            <div class="new-enrollment-fields">
+              <label>Aluno<select id="newEnrollmentStudent" required><option value="">Selecione um aluno</option></select></label>
+              <label>Turma<select id="newEnrollmentClass" required><option value="">Selecione uma turma</option></select></label>
+              <button class="button button-primary" id="createEnrollment" type="button">＋ Matricular aluno</button>
+            </div>
+            <p id="enrollmentFormMessage" class="enrollment-form-message" role="status"></p>
+          </div>
+          <div class="enrollment-filters">
+            <label>Escola<select id="filterSchool"><option value="">Todas</option></select></label>
+            <label>Curso<select id="filterCourse"><option value="">Todos</option></select></label>
+            <label>Professor<select id="filterTeacher"><option value="">Todos</option></select></label>
+          </div>
+          <div id="enrollmentResults" class="enrollment-results"><p class="loading-cell">Carregando matrículas...</p></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="about-section section-wrap" id="sobre"><div class="about-mark">E</div><div><span class="eyebrow">EDUCAHUB</span><h2>Mais tempo para o que<br><span>realmente importa.</span></h2></div><p>O EducaHub é um projeto acadêmico de gestão escolar. Sua interface web conversa com uma API REST, que valida e persiste os dados em um banco de dados.</p></section>
+  </main>
+  <footer><a class="brand" href="#inicio"><span class="brand-mark">E</span><span>educa<span class="brand-accent">hub</span></span></a><span>Projeto acadêmico • Gestão escolar</span><a href="#inicio">Voltar ao topo ↑</a></footer>
+
+  <dialog id="recordDialog" class="record-dialog">
+    <form id="recordForm" method="dialog">
+      <div class="dialog-heading"><div><span class="eyebrow">FORMULÁRIO</span><h3 id="dialogTitle">Novo cadastro</h3></div><button type="button" class="close-dialog" id="closeDialog" aria-label="Fechar">×</button></div>
+      <div id="formFields" class="form-fields"></div>
+      <p id="formError" class="form-error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="button button-light" id="cancelButton">Cancelar</button><button type="submit" class="button button-primary" id="saveButton">Salvar cadastro</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
